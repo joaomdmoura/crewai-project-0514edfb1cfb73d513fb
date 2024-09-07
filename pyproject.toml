@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "new_project"
+version = "0.1.0"
+description = "new_project using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], path="/Users/joaomoura/workspace/crewAI"}
+
+
+[tool.poetry.scripts]
+new_project = "new_project.main:run"
+run_crew = "new_project.main:run"
+train = "new_project.main:train"
+replay = "new_project.main:replay"
+test = "new_project.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
