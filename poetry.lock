@@ -746,38 +746,36 @@ cron = ["capturer (>=2.4)"]
 
 [[package]]
 name = "crewai"
-version = "0.55.2"
+version = "0.55.1"
 description = "Cutting-edge framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks."
 optional = false
-python-versions = ">=3.10,<=3.13"
-files = []
-develop = false
+python-versions = "<=3.13,>=3.10"
+files = [
+    {file = "crewai-0.55.1-py3-none-any.whl", hash = "sha256:941316733f35870573204e51e375647fb3f33ca49ecdd7ebfccf660e023e684b"},
+    {file = "crewai-0.55.1.tar.gz", hash = "sha256:94c479758b224b1f78155df4226463dd3205d2033ca7773fe455c02a9f540067"},
+]
 
 [package.dependencies]
-appdirs = "^1.4.4"
-auth0-python = "^4.7.1"
-click = "^8.1.7"
-crewai-tools = {version = "^0.12.0", optional = true}
-embedchain = "^0.1.114"
+appdirs = ">=1.4.4,<2.0.0"
+auth0-python = ">=4.7.1,<5.0.0"
+click = ">=8.1.7,<9.0.0"
+crewai-tools = {version = ">=0.12.0,<0.13.0", optional = true, markers = "extra == \"tools\""}
+embedchain = ">=0.1.114,<0.2.0"
 instructor = "1.3.3"
-json-repair = "^0.25.2"
-jsonref = "^1.1.0"
+json-repair = ">=0.25.2,<0.26.0"
+jsonref = ">=1.1.0,<2.0.0"
 langchain = ">0.2,<=0.3"
-openai = "^1.13.3"
-opentelemetry-api = "^1.22.0"
-opentelemetry-exporter-otlp-proto-http = "^1.22.0"
-opentelemetry-sdk = "^1.22.0"
-pydantic = "^2.4.2"
-python-dotenv = "^1.0.0"
-regex = "^2024.7.24"
+openai = ">=1.13.3,<2.0.0"
+opentelemetry-api = ">=1.22.0,<2.0.0"
+opentelemetry-exporter-otlp-proto-http = ">=1.22.0,<2.0.0"
+opentelemetry-sdk = ">=1.22.0,<2.0.0"
+pydantic = ">=2.4.2,<3.0.0"
+python-dotenv = ">=1.0.0,<2.0.0"
+regex = ">=2024.7.24,<2025.0.0"
 
 [package.extras]
 agentops = ["agentops (>=0.3.0,<0.4.0)"]
 tools = ["crewai-tools (>=0.12.0,<0.13.0)"]
-
-[package.source]
-type = "directory"
-url = "../../../crewAI"
 
 [[package]]
 name = "crewai-tools"
@@ -5335,4 +5333,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<=3.13"
-content-hash = "daa22c5e0d91942a741e038b4fd9ed213711647ddffcf8c2dc9f8023925a2b16"
+content-hash = "5b024f5d4bf992fc6dd963b8e2989fb7c2a7aabb3c1f969c8ff2f210dddb7c3a"
